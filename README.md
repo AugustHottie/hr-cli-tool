@@ -26,7 +26,7 @@ cd hr-cli-tool
 Since the tool uses Python’s standard libraries (`pwd`, `argparse`, `json`, and `csv`), no external dependencies are needed. Simply make the Python script executable:
 
 ```bash
-chmod +x hr-cli-tool
+pip install  -e .
 ```
 
 You can now run the tool from the command line.
