@@ -1,8 +1,8 @@
-# HR User Export Tool
+# HR CLI Tool
 
 ## Overview
 
-The **HR User Export Tool** is a command-line utility designed to export a system's user information into formats suitable for sharing with other departments. It provides an easy way to extract user details such as username, user ID, home directory, and default shell into either **JSON** or **CSV** formats.
+The **HR ClI Tool** is a command-line utility designed to export a system's user information into formats suitable for sharing with other departments. It provides an easy way to extract user details such as username, user ID, home directory, and default shell into either **JSON** or **CSV** formats.
 
 By default, the tool outputs the data in **JSON** format to the terminal, but it supports a `--format` flag to export the data in **CSV** format. Additionally, the `--path` flag allows the user to specify a file path to save the output.
 
@@ -26,21 +26,21 @@ cd hr-cli-tool
 Since the tool uses Python’s standard libraries (`pwd`, `argparse`, `json`, and `csv`), no external dependencies are needed. Simply make the Python script executable:
 
 ```bash
-chmod +x hr
+chmod +x hr-cli-tool
 ```
 
 You can now run the tool from the command line.
 
 ## Usage
 
-The **HR User Export Tool** can be used in several ways to extract and export user data. Below are some examples of how to use the tool.
+The **HR CLI Tool** can be used in several ways to extract and export user data. Below are some examples of how to use the tool.
 
 ### Default JSON Output to Stdout
 
 If no flags are specified, the tool will export the user information in **JSON** format to the terminal.
 
 ```bash
-$ hr
+$ hr-cli-tool
 ```
 
 Example output:
@@ -67,7 +67,7 @@ Example output:
 To export user information in **CSV** format, use the `--format` flag with the value `csv`:
 
 ```bash
-$ hr --format=csv
+$ hr-cli-tool --format=csv
 ```
 
 Example output:
@@ -85,13 +85,13 @@ To export the user data to a file, use the `--path` flag followed by the file pa
 #### Export to JSON file:
 
 ```bash
-$ hr --path=path/to/users.json
+$ hr-cli-tool --path=path/to/users.json
 ```
 
 #### Export to CSV file:
 
 ```bash
-$ hr --format=csv --path=path/to/users.csv
+$ hr-cli-tool --format=csv --path=path/to/users.csv
 ```
 
 ## Command-Line Options
@@ -103,17 +103,17 @@ $ hr --format=csv --path=path/to/users.csv
 
 - Export user information in JSON format to a file:
   ```bash
-  $ hr --path=/tmp/users.json
+  $ hr-cli-tool --path=/tmp/users.json
   ```
 
 - Export user information in CSV format to stdout:
   ```bash
-  $ hr --format=csv
+  $ hr-cli-tool --format=csv
   ```
 
 - Export user information in CSV format to a file:
   ```bash
-  $ hr --format=csv --path=/tmp/users.csv
+  $ hr-cli-tool --format=csv --path=/tmp/users.csv
   ```
 
 ## Internals
@@ -147,12 +147,12 @@ By design, the tool filters out system users by excluding any users with a user 
 1. Clone the repository:
    ```bash
    git clone https://github.com/AugustHottie/hr-cli-tool.git
-   cd hr-user-export-tool
+   cd hr-cli-tool
    ```
 
-2. Ensure the tool is executable:
+2. Install the tool:
    ```bash
-   chmod +x hr
+    pip install  -e .
    ```
 
 3. You're ready to use the tool or contribute to its development!

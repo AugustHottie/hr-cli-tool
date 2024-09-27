@@ -14,6 +14,6 @@ setup(
     package_dir={'': 'src'},
     install_requires=[],
     entry_points={
-        'console_scripts': 'hr-cli-tool=hr-cli-tool.cli:main',
+        'console_scripts': 'hr-cli-tool=hr.cli:main',
     },
 )
